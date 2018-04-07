@@ -13,11 +13,11 @@ namespace Examples.Aspects
         {
             private readonly IFunction<TInput, TOutput> decorated;
 
+            private readonly ILogger logger;
+
             private readonly ILoggingDataExtractor<TInput, TOutput> loggingDataExtractor;
 
             private readonly LoggingData[] constantLoggingData;
-
-            private readonly ILogger logger;
 
             public Aspect(
                 IFunction<TInput, TOutput> decorated,
